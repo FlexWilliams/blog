@@ -1,10 +1,26 @@
 ---
-import { SITE_TITLE } from "../consts";
+import {
+  CONSOLE_DATE,
+  CONSOLE_PROMPT,
+  CONSOLE_PWD,
+  CONSOLE_USER,
+} from "../consts";
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2>
+      <a href="/">
+        <div>
+          <span class="console-user">{CONSOLE_USER}</span>
+          <span class="console-pwd">{CONSOLE_PWD}</span>
+          <span class="console-date">{CONSOLE_DATE}</span>
+        </div>
+        <div>
+          <span class="console-prompt">{CONSOLE_PROMPT}</span>
+        </div>
+      </a>
+    </h2>
     <div class="internal-links">
       <!-- <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
@@ -66,9 +82,13 @@ import { SITE_TITLE } from "../consts";
 </header>
 <style>
   header {
+    display: flex;
+    align-items: center;
+    min-height: 10%;
+    max-height: 10%;
     margin: 0;
     padding: 0 1em;
-    background: white;
+    background-color: #dfdfdf;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {
@@ -84,6 +104,7 @@ import { SITE_TITLE } from "../consts";
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
   nav a {
     padding: 1em 0.5em;
@@ -98,7 +119,23 @@ import { SITE_TITLE } from "../consts";
   .social-links,
   .social-links a {
     display: flex;
+    align-self: baseline;
   }
+
+  span.console-user {
+    color: #00afaf;
+  }
+  span.console-pwd {
+    color: #079dfc;
+  }
+  span.console-date {
+    color: #5f5fff;
+  }
+
+  span.console-prompt {
+    color: #ff8603;
+  }
+
   @media (max-width: 720px) {
     .social-links {
       display: none;
