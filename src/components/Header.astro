@@ -14,7 +14,7 @@ import {
         <div>
           <span class="console-user">{CONSOLE_USER}</span>
           <span class="console-pwd">{CONSOLE_PWD}</span>
-          <span class="console-date">{CONSOLE_DATE}</span>
+          <span id="console-date" class="console-date"></span>
         </div>
         <div>
           <span class="console-prompt">{CONSOLE_PROMPT}</span>
@@ -81,6 +81,16 @@ import {
     </div>
   </nav>
 </header>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const promptDate = document.getElementById("console-date");
+    if (promptDate) {
+      promptDate.innerText = `${new Date().toDateString().toLocaleLowerCase()}`;
+    }
+  });
+</script>
+
 <style>
   header {
     display: flex;
