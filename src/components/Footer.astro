@@ -2,7 +2,7 @@
 const today = new Date();
 ---
 
-<footer>
+<footer class="bg-slate-700">
   &copy; {today.getFullYear()} Alex Williams. All rights reserved.
   <div class="social-links">
     <a href="https://alexwilliams.site" target="_blank">
@@ -60,9 +60,11 @@ const today = new Date();
 <style>
   footer {
     padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
     color: rgb(var(--gray));
     text-align: center;
+    min-height: 20%;
+    max-height: 20%;
   }
   .social-links {
     display: flex;
