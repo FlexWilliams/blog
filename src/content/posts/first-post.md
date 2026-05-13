@@ -30,7 +30,7 @@ With less code, (generally),
 
 What's difficult is keeping code to a minimum.
 
-During my last sprint, I was able to delivery new features AND increase performance while ending up with LESS code than I originally started with! From 20449 to 19572.
+During my last sprint, I was able to delivery new features AND increase performance while ending up with LESS code than I originally started with! From 20449 lines to 19572.
 
 How?
 
@@ -40,7 +40,7 @@ Specifically, by leveraging: Design Patterns, DRY Principles, YAGNI, and the lik
 
 Saved me 877 lines of code!
 
-I was motivated to create a script to observe the growth of my own App's main codebase.
+The ragebait motivated me to create a script to observe the growth of my own App's main codebase.
 
 All it does is count the lines per file and then calculates the sum of them all.
 
@@ -48,14 +48,14 @@ I run it after each story I complete to see whether I'm up/down from before.
 
 Its not meant to place a hard limit on lines of code, but instead, to say:
 
-With only 19572 of code, my app is:
+With only 19572 of code, my app is/has:
 
 - An offline music player
 - Themeable
 - Crossbrowser
 - Responsive to multiple devices
 - Custom API support for non-local experience
-- Caching
+- Caching enabled
 - 2d/3d visualizations
 
 And theres still room for improvement, all always!
