@@ -22,17 +22,17 @@ Even after reading his response to the community backlash [here](https://x.com/g
 
 Regardless, I stand firm in believing that Less (Code) is More.
 
-With less code, (generally),
+With less code, (generally):
 
 - Testing becomes easier
 - Production issues are quicker to diagnose and resolve
-- Design and Architecture decisions can be made more clearer
-- Build and Deployment times are reduced
-- Less mental fatigue for developers, faster feature delivery
+- Design and architecture decisions can be made more clearer
+- Build and deployment times are reduced
+- Less mental fatigue for developers leading to faster feature delivery
 
 <br>
 
-What's difficult is keeping code to a minimum.
+The challenging part is **_keeping_** code to a minimum.
 
 During my last sprint, I was able to deliver new features AND increase performance while ending up with LESS code than I originally started with! From 20490 lines to 20068.
 
@@ -40,7 +40,7 @@ About a ~2% code reduction. Not a lot. But...less.
 
 How?
 
-By Refactoring. Old school style.
+By **_Refactoring_**. Old school style.
 
 Specifically, by leveraging: Design Patterns, DRY Principles, YAGNI, and the like.
 
@@ -49,6 +49,8 @@ The ragebait motivated me to create a script to observe the growth of my own App
 `git ls-files --directory src/ | grep -E '\.js|\.ts|\.svelte' | xargs wc -l`
 
 All it does is count the lines per file tracked by git (\*.js, \*.ts, \*.svelte) and also calculates the sum of them all.
+
+![Screenshot of LOC Script](../../assets/posts/first-post/2.png "Screenshot of LOC Script")
 
 I run it after each story I complete to see whether I'm up/down from before.
 
@@ -69,3 +71,10 @@ With only 20k lines of code, my app is/has:
 And theres still room for improvement, as always!
 
 Til next time, Ciao...
+
+<br>
+<br>
+
+Some Further Reading:
+
+- Extreme minimalism and obfuscation - [International_Obfuscated_C_Code_Contest](https://en.wikipedia.org/wiki/International_Obfuscated_C_Code_Contest)
