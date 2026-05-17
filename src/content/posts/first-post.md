@@ -1,5 +1,5 @@
 ---
-title: "Hot Take: Less (Code) Is More"
+title: "Hot Take: Less Code Is More"
 description: "Bloatware is back, but we must resist!"
 pubDate: "May 13 2026"
 heroImage: "../../assets/posts/first-post/balance.jpg"
@@ -29,11 +29,11 @@ This isn't a bash on trendy AI.
 <u>Definitely</u> leverage it as a tool to write better code.
 Code that **_you_** will be responsible for.
 
-To read, maintain, and build upon.
+Reading, Maintaining, and Building upon.
 
-Carelessly vibe-coding is a recipe for ~~slop~~ disaster.
+Accelerating vibe-code is a recipe for ~~slop~~ disaster.
 
-& unless you yourself can properly read and contextualize 37k lines of code a day, **_and still speed up_**, you would eventually hit a limit on your own understanding of the codebase, just like the AI agents themselves!
+& unless you yourself can read and contextualize 37k lines of code per day, **_and still speed up_**, the most likely scenrario is that you are going to hit a limit on your own understanding of the codebase, just like the AI agents themselves.
 
 ### Now nobody knows!
 
@@ -41,11 +41,11 @@ Carelessly vibe-coding is a recipe for ~~slop~~ disaster.
 
 Regardless, I stand firm in believing that generally:
 
-"Less (Code) is More"
+"Less Code is More"
 
 With less code (again, generally):
 
-- Your app is more accessibile to Users (faster load times)
+- Your app is more accessibile to Users (faster load times) [^disclaimer1], [^disclaimer2]
 - Testing becomes easier
 - Production issues are quicker to diagnose and resolve
 - Design and architecture becomes clearer
@@ -59,7 +59,11 @@ With all those benefits there has to be a cost right?
 
 Yup.
 
-The cost is in **_keeping_** the code to a minimum, yet understandable and clear.
+The cost is in **_keeping_** the code to a minimum.
+
+### yet understandable and clear.
+
+<br>
 
 During my last _"sprint"_ of a hobby project, I was able to deliver new features AND increase performance while ending up with LESS code than I originally started with!
 
@@ -71,9 +75,11 @@ How, you say?
 
 By **_Refactoring_**. Old school style.
 
-Specifically, by leveraging: Design Patterns, DRY Principles, YAGNI, and the like.
+Specifically by leveraging: Design Patterns, DRY Principles, KISS, YAGNI, and the like.
 
-The ragebait X post motivated me to create a script to observe the growth of my own App's main codebase:
+De-bloating the code by minimizing logic through OOP (where it made sense).
+
+The aforementioned ragebait motivated me to create a script to observe the growth of my own App's main codebase:
 
 `git ls-files --directory src/ | grep -E '\.js|\.ts|\.svelte' | xargs wc -l`
 
@@ -83,19 +89,25 @@ All it does is count the lines per file tracked by git and also calculates the s
 
 ![Screenshot of LOC Script](../../assets/posts/first-post/2.png "Screenshot of LOC Script")
 
-I run it after each story I complete to see whether I'm up/down from before.
+I run it after each story I complete to see whether LOCs are up/down from before.
 
-Its not meant to place a hard limit on lines of code, but instead, to say:
+Spoiler Alert: Majority of the time, they're up!
 
-With only ~20k lines of code so far, my app is/has:
+But as I mentioned earlier, that's not always a good thing.
+So this file serves as another way to look out for refactoring opportunities.
+
+& I want to stress that this is not meant to place a hard limit on lines of code, but instead, to say:
+
+With only ~20k lines of code thus far, my app is/has:
 
 - An offline music player
 - Themeable
 - Crossbrowser
-- Responsive to multiple devices
+- Responsive to multiple layouts
 - Custom API support for non-local music management
 - Caching enabled
 - 2d/3d visualizations
+- Partial support for viz editing
 
 <br>
 
@@ -112,3 +124,14 @@ Some Further Reading:
 
 - Program optimization - [Program optimization](https://en.wikipedia.org/wiki/Program_optimization)
 - Extreme minimalism and obfuscation (for funsies) - [International_Obfuscated_C_Code_Contest](https://en.wikipedia.org/wiki/International_Obfuscated_C_Code_Contest)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+[^disclaimer1]: An example would be removing irrelevant HTML and CSS within the codebase which increase DOM load times.
+
+[^disclaimer2]: Although most code in production is compiled or compressed, LOC as a metric can still mean duplicated code or unused function calls are included in the distribution.
